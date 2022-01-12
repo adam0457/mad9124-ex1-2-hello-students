@@ -1,3 +1,8 @@
+/**
+ * Student: Vladymir Adam
+ * Email: adam0457@algonquinlive.com
+ * Mad9124 - Exercise 1-2
+ */
 'use strict'
 
 // 1. Read the JSON file into a variable called students
@@ -7,3 +12,20 @@
 
 // 3. Print out the number of last names starting with the letter D
 // e.g. Count of last names starting with D is 1
+
+const students = require('./students.json');
+
+students.forEach(student => {
+    console.log("Hello " + student.firstName + " " + student.lastName);
+})
+
+const studentsFiltered = students.filter(student => {
+  return student.lastName.charAt(0).toUpperCase() == "D";
+})
+
+console.log(`Count of last names starting with D is: ${studentsFiltered.length}`);
+
+
+
+
+
